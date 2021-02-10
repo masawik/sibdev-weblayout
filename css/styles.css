@@ -144,13 +144,6 @@ a {
     right: 6px;
 }
 
-.menu-toggle {
-    /*спрятал посильнее на всякий случай*/
-    visibility: hidden;
-    display: flex;
-    top: -10px;
-}
-
 .menu-btn__btn > span,
 .menu-btn__btn > span::after,
 .menu-btn__btn > span::before {
@@ -161,10 +154,12 @@ a {
     border-radius: 50px;
     position: absolute;
 }
+
 .menu-btn__btn > span::before {
     content: '';
     top: -8px;
 }
+
 .menu-btn__btn > span::after {
     content: '';
     top: 8px;
@@ -221,15 +216,21 @@ a {
     margin-right: 12px;
 }
 
-.coupon-list {
+.main {
     padding: 0 20px 0 32px;
 }
 
-/*todo подключить шрифт*/
+.coupon-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+/*todo подключить шрифт*/
 .coupon {
     padding: 16px 20px;
     margin: 14px 0;
+    width: 268px;
     font-size: 12px;
     display: block;
     min-height: 130px;
@@ -285,7 +286,7 @@ a {
     background-image: url("../img/cake.png");
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 767px) {
     .menu__icon {
         display: none;
     }
@@ -308,12 +309,8 @@ a {
         display: none;
     }
 
-    .logo__title {
-        display: none;
-    }
-
-    .menu__icon {
-        margin: 0 auto;
+    .menu__link {
+        padding-left: 42px;
     }
 
     .menu-plate {
@@ -321,16 +318,31 @@ a {
     }
 
     .logo {
-        padding-left: 0;
+        padding-left: 40px;
     }
 
-    .logo__img {
-        margin: 0 auto;
+    .logo__title {
+        display: none;
     }
 
-    #menu-toggle:checked + .menu-plate {
+    .menu-plate_opened {
         width: 246px;
     }
 
+    .menu-plate_opened .menu__link-text,
+    .menu-plate_opened .logo__title {
+        display: inline;
+    }
 
+    .menu-plate_opened .menu__icon {
+        margin: 0 12px 0 0;
+    }
+
+    .main {
+        padding: 0 20px 0 136px;
+    }
+
+    .coupon {
+        width: 296px;
+    }
 }
