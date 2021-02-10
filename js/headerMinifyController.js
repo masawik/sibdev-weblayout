@@ -1,4 +1,5 @@
 (() => {
+  if (innerWidth >= 1440) return
   const MINIFIED_CLASS = 'header_minified'
   const $main = document.querySelector('.main-js')
   const $header = document.querySelector('.header-js')

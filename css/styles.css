@@ -40,13 +40,17 @@ a {
     color: inherit;
 }
 
+.container {
+    padding: 0 22px 0 32px;
+}
+
 .btn_transparent {
     border: none;
     background-color: transparent;
 }
 
 .header {
-    padding: 38px 22px 26px 32px;
+    padding: 38px 0 26px 0;
     background-color: var(--white);
     border-bottom: 1px solid var(--grayE5);
     transition-property: padding-left;
@@ -55,22 +59,22 @@ a {
 }
 
 .header_minified {
-    padding: 28px 21px 12px 68px;
+    padding: 27px 0 27px 34px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
 
-.header_minified > .header__title {
+.header_minified .header__title {
     display: none;
 }
 
-.header_minified > .search-block > .search-block__btn {
+.header_minified .search-block__btn {
     display: none;
 }
 
-.header_minified > .search-block > .search-block__input {
+.header_minified .search-block__input {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -216,10 +220,6 @@ a {
     margin-right: 12px;
 }
 
-.main {
-    padding: 0 20px 0 32px;
-}
-
 .coupon-list {
     display: flex;
     justify-content: space-around;
@@ -293,12 +293,22 @@ a {
 }
 
 @media all and (min-width: 768px) {
-    .header {
-        padding: 38px 22px 26px 136px;
+    .container {
+        padding: 0 26px 0 125px;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 38px;
     }
 
     .header_minified {
-        padding: 28px 21px 12px 172px;
+        padding-left: 24px;
+    }
+
+    .search-block__input {
+        font-size: 18px;
+        padding: 15px 21px 15px 43px;
     }
 
     .menu-plate {
@@ -329,6 +339,10 @@ a {
         width: 246px;
     }
 
+    .menu-container__menu {
+        margin-top: 35px;
+    }
+
     .menu-plate_opened .menu__link-text,
     .menu-plate_opened .logo__title {
         display: inline;
@@ -338,11 +352,86 @@ a {
         margin: 0 12px 0 0;
     }
 
-    .main {
-        padding: 0 20px 0 136px;
+    .coupon-list {
+        padding-top: 19px;
     }
 
     .coupon {
         width: 296px;
+        margin: 10px 0;
+    }
+
+    .coupon__subtitle,
+    .coupon__title {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .coupon__body {
+        margin-top: 10px;
+    }
+
+    .coupon__content {
+        font-size: 36px;
+        margin-bottom: 7px;
+    }
+
+    .coupon__type {
+        font-size: 16px;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .container {
+        padding: 0 60px 0 292px;
+    }
+
+    .header {
+        padding: 38px 0 39px 0;
+    }
+
+    .header__title {
+        margin-bottom: 33px;
+    }
+
+    .coupon {
+        width: 347px;
+    }
+
+    .coupon__subtitle,
+    .coupon__title {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .header__title {
+        display: block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menu-plate {
+        width: 240px;
+    }
+
+    .menu__link-text {
+        display: inline;
+    }
+
+    .logo__img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo__title {
+        display: inline;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .coupon-list {
+        padding-top: 26px;
     }
 }

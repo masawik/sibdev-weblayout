@@ -11,255 +11,292 @@
 </head>
 <body>
 <header class="header header-js">
-  <div class="header__title">
-    <h1 class="title header__title-js">Развлечения</h1>
-  </div>
-
-  <form class="search-block header__search-block">
-    <button class="search-block__btn btn_transparent">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z"
-              stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </svg>
-    </button>
-    <input class="search-block__input" placeholder="Какой магазин вам нужен?" type="search">
-  </form>
-
-  <div class="menu-plate menu-plate-js">
-    <div class="menu-btn">
-      <svg class="menu-btn__background" width="48" height="106" viewBox="0 0 48 106" fill="#F3F4F9"
-           xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0C0 11.7415 9.99255 16.1938 20.8591 21.0356C33.809 26.8055 48 33.1285 48 53C48 72.8715 33.809 79.1945 20.8591 84.9644C9.99255 89.8062 0 94.2585 0 106V0Z"/>
-      </svg>
-      <button onclick="sideBar.toggle()" class="menu-btn__btn btn_transparent">
-        <span></span>
-      </button>
+  <div class="container">
+    <div class="header__title">
+      <h1 class="title header__title-js">Развлечения</h1>
     </div>
 
-    <div class="menu-container">
-      <a class="logo" href="#">
-        <img class="logo__img" src="./img/logo.png" alt="BECO logo">
-        <span class="logo__title">BECO</span>
-      </a>
+    <form class="search-block header__search-block">
+      <button class="search-block__btn btn_transparent">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z"
+                stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <input class="search-block__input" placeholder="Какой магазин вам нужен?" type="search">
+    </form>
 
-      <nav class="menu menu-container__menu">
-        <ul>
-          <li class="menu__item">
-            <a class="menu__link" href="#">
-              <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M10 3H3V10H10V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M21 3H14V10H21V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M21 14H14V21H21V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M10 14H3V21H10V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-              </svg>
-              <span class="menu__link-text">Каталог</span>
-            </a>
-          </li>
+    <div class="menu-plate menu-plate-js">
+      <div class="menu-btn">
+        <svg class="menu-btn__background" width="48" height="106" viewBox="0 0 48 106" fill="#F3F4F9"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0C0 11.7415 9.99255 16.1938 20.8591 21.0356C33.809 26.8055 48 33.1285 48 53C48 72.8715 33.809 79.1945 20.8591 84.9644C9.99255 89.8062 0 94.2585 0 106V0Z"/>
+        </svg>
+        <button onclick="sideBar.toggle()" class="menu-btn__btn btn_transparent">
+          <span></span>
+        </button>
+      </div>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">
-              <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M22 12H18L15 21L9 3L6 12H2" stroke="black" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-              </svg>
-              <span class="menu__link-text">Здоровье</span>
-            </a>
-          </li>
+      <div class="menu-container">
+        <a class="logo" href="#">
+          <img class="logo__img" src="./img/logo.png" alt="BECO logo">
+          <span class="logo__title">BECO</span>
+        </a>
 
-          <li class="menu__item">
-            <a class="menu__link menu__link_selected" href="#">
-              <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.60999C2.1283 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z"
-                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span class="menu__link-text">Красота</span>
-            </a>
-          </li>
+        <nav class="menu menu-container__menu">
+          <ul>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none">
+                  <path d="M10 3H3V10H10V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M21 3H14V10H21V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M21 14H14V21H21V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M10 14H3V21H10V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+                <span class="menu__link-text">Каталог</span>
+              </a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">
-              <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none">
+                  <path d="M22 12H18L15 21L9 3L6 12H2" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+                <span class="menu__link-text">Здоровье</span>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link menu__link_selected" href="#">
+                <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none">
+                  <path d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.60999C2.1283 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z"
+                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="menu__link-text">Красота</span>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none">
                   <path d="M16 22V18.13C16.0375 17.6532 15.9731 17.1738 15.811 16.7238C15.6489 16.2738 15.3929 15.8634 15.06 15.52C18.2 15.17 21.5 13.98 21.5 8.52C21.4997 7.12383 20.9627 5.7812 20 4.77C20.4559 3.54851 20.4236 2.19835 19.91 0.999999C19.91 0.999999 18.73 0.649999 16 2.48C13.708 1.85882 11.292 1.85882 9 2.48C6.27 0.649999 5.09 0.999999 5.09 0.999999C4.57638 2.19835 4.54414 3.54851 5 4.77C4.03013 5.7887 3.49252 7.14346 3.5 8.55C3.5 13.97 6.8 15.16 9.94 15.55C9.611 15.89 9.35726 16.2954 9.19531 16.7399C9.03335 17.1844 8.96681 17.6581 9 18.13V22M9 19C4 20.5 4 16.5 2 16L9 19Z"
                         stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="24" height="24" fill="white"/>
-                  </clipPath>
-                </defs>
-              </svg>
-              <span class="menu__link-text">Развлечение</span>
-            </a>
-          </li>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="menu__link-text">Развлечение</span>
+              </a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">
-              <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M16 3H1V16H16V3Z" stroke="black" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M16 8H20L23 11V16H16V8Z" stroke="black" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-                <path d="M5.5 21C6.88071 21 8 19.8807 8 18.5C8 17.1193 6.88071 16 5.5 16C4.11929 16 3 17.1193 3 18.5C3 19.8807 4.11929 21 5.5 21Z"
-                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z"
-                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span class="menu__link-text">Авто</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none">
+                  <path d="M16 3H1V16H16V3Z" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M16 8H20L23 11V16H16V8Z" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M5.5 21C6.88071 21 8 19.8807 8 18.5C8 17.1193 6.88071 16 5.5 16C4.11929 16 3 17.1193 3 18.5C3 19.8807 4.11929 21 5.5 21Z"
+                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z"
+                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="menu__link-text">Авто</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="main main-js">
-  <ul class="coupon-list">
-    <li class="coupon coupon_highlighted">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">пробка на мира</div>
-          <div class="coupon__subtitle">Вечер для двоих</div>
-        </div>
+  <div class="container">
+    <ul class="coupon-list">
+      <li class="coupon coupon_highlighted">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">пробка на мира</div>
+            <div class="coupon__subtitle">Вечер для двоих</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">50%</div>
-          <div class="coupon__type">скидка</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">50%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">кино и немцы</div>
-          <div class="coupon__subtitle">Бесплатный бокал пива</div>
-        </div>
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">кино и немцы</div>
+            <div class="coupon__subtitle">Бесплатный бокал пива</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">ВАРВАР</div>
-          <div class="coupon__type">промокод</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">ВАРВАР</div>
+            <div class="coupon__type">промокод</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon coupon_with-bg cake">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">valery cakes</div>
-          <div class="coupon__subtitle">Торт</div>
-        </div>
+      <li class="coupon coupon_with-bg cake">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">valery cakes</div>
+            <div class="coupon__subtitle">Торт</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">30%</div>
-          <div class="coupon__type">скидка</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">30%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon coupon_highlighted">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">пробка на мира</div>
-          <div class="coupon__subtitle">Вечер для двоих</div>
-        </div>
+      <li class="coupon coupon_highlighted">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">пробка на мира</div>
+            <div class="coupon__subtitle">Вечер для двоих</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">50%</div>
-          <div class="coupon__type">скидка</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">50%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">кино и немцы</div>
-          <div class="coupon__subtitle">Бесплатный бокал пива</div>
-        </div>
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">кино и немцы</div>
+            <div class="coupon__subtitle">Бесплатный бокал пива</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">ВАРВАР</div>
-          <div class="coupon__type">промокод</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">ВАРВАР</div>
+            <div class="coupon__type">промокод</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">valery cakes</div>
-          <div class="coupon__subtitle">Торт</div>
-        </div>
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">valery cakes</div>
+            <div class="coupon__subtitle">Торт</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">30%</div>
-          <div class="coupon__type">скидка</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">30%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon coupon_highlighted">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">пробка на мира</div>
-          <div class="coupon__subtitle">Вечер для двоих</div>
-        </div>
+      <li class="coupon coupon_highlighted">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">пробка на мира</div>
+            <div class="coupon__subtitle">Вечер для двоих</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">50%</div>
-          <div class="coupon__type">скидка</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">50%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">кино и немцы</div>
-          <div class="coupon__subtitle">Бесплатный бокал пива</div>
-        </div>
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">кино и немцы</div>
+            <div class="coupon__subtitle">Бесплатный бокал пива</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">ВАРВАР</div>
-          <div class="coupon__type">промокод</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">ВАРВАР</div>
+            <div class="coupon__type">промокод</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">valery cakes</div>
-          <div class="coupon__subtitle">Торт</div>
-        </div>
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">valery cakes</div>
+            <div class="coupon__subtitle">Торт</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">30%</div>
-          <div class="coupon__type">скидка</div>
-        </div>
-      </a>
-    </li>
+          <div class="coupon__body">
+            <div class="coupon__content">30%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
 
-    <li class="coupon">
-      <a href="#">
-        <div class="coupon__header">
-          <div class="coupon__title">кино и немцы</div>
-          <div class="coupon__subtitle">Бесплатный бокал пива</div>
-        </div>
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">кино и немцы</div>
+            <div class="coupon__subtitle">Бесплатный бокал пива</div>
+          </div>
 
-        <div class="coupon__body">
-          <div class="coupon__content">ВАРВАР</div>
-          <div class="coupon__type">промокод</div>
-        </div>
-      </a>
-    </li>
-  </ul>
+          <div class="coupon__body">
+            <div class="coupon__content">ВАРВАР</div>
+            <div class="coupon__type">промокод</div>
+          </div>
+        </a>
+      </li>
+
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">valery cakes</div>
+            <div class="coupon__subtitle">Торт</div>
+          </div>
+
+          <div class="coupon__body">
+            <div class="coupon__content">30%</div>
+            <div class="coupon__type">скидка</div>
+          </div>
+        </a>
+      </li>
+
+      <li class="coupon">
+        <a href="#">
+          <div class="coupon__header">
+            <div class="coupon__title">кино и немцы</div>
+            <div class="coupon__subtitle">Бесплатный бокал пива</div>
+          </div>
+
+          <div class="coupon__body">
+            <div class="coupon__content">ВАРВАР</div>
+            <div class="coupon__type">промокод</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </main>
 <script src="js/headerMinifyController.js"></script>
 <script src="js/sidebarController.js"></script>
