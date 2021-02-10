@@ -70,7 +70,7 @@ a {
     display: none;
 }
 
-.header_minified > .search-block >  .search-block__input {
+.header_minified > .search-block > .search-block__input {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -171,7 +171,7 @@ a {
 }
 
 .menu-container {
-    padding: 40px 20px 0 0;
+    padding: 40px 0 0 0;
     font-weight: bold;
 }
 
@@ -203,12 +203,22 @@ a {
 }
 
 .menu__link {
-    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 20px;
 }
 
 .menu__link_selected {
     color: var(--cyan);
     border-left: 2px solid var(--cyan);
+}
+
+.menu__link_selected > svg > * {
+    stroke: var(--cyan);
+}
+
+.menu__icon {
+    margin-right: 12px;
 }
 
 .coupon-list {
@@ -273,4 +283,54 @@ a {
 
 .cake {
     background-image: url("../img/cake.png");
+}
+
+@media all and (max-width: 320px) {
+    .menu__icon {
+        display: none;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .header {
+        padding: 38px 22px 26px 136px;
+    }
+
+    .header_minified {
+        padding: 28px 21px 12px 172px;
+    }
+
+    .menu-plate {
+        min-width: 104px;
+    }
+
+    .menu__link-text {
+        display: none;
+    }
+
+    .logo__title {
+        display: none;
+    }
+
+    .menu__icon {
+        margin: 0 auto;
+    }
+
+    .menu-plate {
+        left: 0;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .logo__img {
+        margin: 0 auto;
+    }
+
+    #menu-toggle:checked + .menu-plate {
+        width: 246px;
+    }
+
+
 }
