@@ -10,12 +10,12 @@
   <title>Beko</title>
 </head>
 <body>
-<header class="header">
+<header class="header header-js">
   <div class="header__title">
-    <h1 class="title">Развлечения</h1>
+    <h1 class="title header__title-js">Развлечения</h1>
   </div>
 
-  <div class="search-block">
+  <form class="search-block header__search-block">
     <button class="search-block__btn btn_transparent">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z"
@@ -24,9 +24,8 @@
               stroke-linejoin="round"/>
       </svg>
     </button>
-
-    <input class="search-block__input" placeholder="Какой магазин вам нужен?" type="text">
-  </div>
+    <input class="search-block__input" placeholder="Какой магазин вам нужен?" type="search">
+  </form>
 
   <!--  инпут отвечает за открытие меню. при checked ищет menu-container по соседним элементам, поэтому находится тут-->
   <input id="menu-toggle" class="menu-toggle" type="checkbox">
@@ -74,5 +73,94 @@
     </div>
   </div>
 </header>
+
+<main class="main main-js">
+  <ul class="coupon-list">
+    <li class="coupon coupon_highlighted">
+      <a href="#">
+        <div class="coupon__header">
+          <div class="coupon__title">пробка на мира</div>
+          <div class="coupon__subtitle">Вечер для двоих</div>
+        </div>
+
+        <div class="coupon__body">
+          <div class="coupon__content">50%</div>
+          <div class="coupon__type">скидка</div>
+        </div>
+      </a>
+    </li>
+
+    <li class="coupon">
+      <a href="#">
+        <div class="coupon__header">
+          <div class="coupon__title">кино и немцы</div>
+          <div class="coupon__subtitle">Бесплатный бокал пива</div>
+        </div>
+
+        <div class="coupon__body">
+          <div class="coupon__content">ВАРВАР</div>
+          <div class="coupon__type">промокод</div>
+        </div>
+      </a>
+    </li>
+
+    <li class="coupon coupon_with-bg cake">
+      <a href="#">
+        <div class="coupon__header">
+          <div class="coupon__title">valery cakes</div>
+          <div class="coupon__subtitle">Торт</div>
+        </div>
+
+        <div class="coupon__body">
+          <div class="coupon__content">30%</div>
+          <div class="coupon__type">скидка</div>
+        </div>
+      </a>
+    </li>
+
+    <li class="coupon coupon_highlighted">
+      <a href="#">
+        <div class="coupon__header">
+          <div class="coupon__title">пробка на мира</div>
+          <div class="coupon__subtitle">Вечер для двоих</div>
+        </div>
+
+        <div class="coupon__body">
+          <div class="coupon__content">50%</div>
+          <div class="coupon__type">скидка</div>
+        </div>
+      </a>
+    </li>
+
+    <li class="coupon">
+      <a href="#">
+        <div class="coupon__header">
+          <div class="coupon__title">кино и немцы</div>
+          <div class="coupon__subtitle">Бесплатный бокал пива</div>
+        </div>
+
+        <div class="coupon__body">
+          <div class="coupon__content">ВАРВАР</div>
+          <div class="coupon__type">промокод</div>
+        </div>
+      </a>
+    </li>
+
+    <li class="coupon">
+      <a href="#">
+        <div class="coupon__header">
+          <div class="coupon__title">valery cakes</div>
+          <div class="coupon__subtitle">Торт</div>
+        </div>
+
+        <div class="coupon__body">
+          <div class="coupon__content">30%</div>
+          <div class="coupon__type">скидка</div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</main>
+<script src="js/headerMinifyController.js"></script>
 </body>
 </html>

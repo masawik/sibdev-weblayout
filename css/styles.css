@@ -1,8 +1,11 @@
 :root {
     --grayC4: #C4C4C4;
     --grayE5: #E5E5E5;
+    --grayFA: #FAFAFA;
     --black26: #262626;
     --cyan: #34ABE0;
+    --white: #FFF;
+    --red: #DF212D;
 
     --menuBG: #F3F4F9;
     --menuWidth: 198px;
@@ -15,6 +18,8 @@
 
 body {
     font-family: Open Sans, sans-serif;
+    background-color: var(--grayFA);
+    padding-bottom: 20px;
 }
 
 ul, li, h1 {
@@ -42,7 +47,32 @@ a {
 
 .header {
     padding: 38px 22px 26px 32px;
+    background-color: var(--white);
     border-bottom: 1px solid var(--grayE5);
+    transition-property: padding-left;
+    transition-duration: .3s;
+    z-index: 1;
+}
+
+.header_minified {
+    padding: 28px 21px 12px 68px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header_minified > .header__title {
+    display: none;
+}
+
+.header_minified > .search-block > .search-block__btn {
+    display: none;
+}
+
+.header_minified > .search-block >  .search-block__input {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .header__title {
@@ -80,7 +110,7 @@ a {
 .menu-plate {
     background-color: var(--menuBG);
     min-width: 192px;
-    z-index: 1;
+    z-index: 2;
     transition-property: left, right;
     transition-duration: .3s;
     position: fixed;
@@ -179,4 +209,68 @@ a {
 .menu__link_selected {
     color: var(--cyan);
     border-left: 2px solid var(--cyan);
+}
+
+.coupon-list {
+    padding: 0 20px 0 32px;
+}
+
+/*todo подключить шрифт*/
+
+.coupon {
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: 12px;
+    display: block;
+    min-height: 130px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.coupon_highlighted {
+    border: 1px solid var(--red);
+}
+
+.coupon__header {
+    line-height: 16px;
+}
+
+.coupon__title {
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.coupon__subtitle,
+.coupon__type {
+    opacity: .5;
+}
+
+.coupon__body {
+    margin-top: 25px;
+}
+
+.coupon__content {
+    color: var(--red);
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 24px;
+}
+
+.coupon__type {
+    line-height: 16px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.coupon_with-bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.cake {
+    background-image: url("../img/cake.png");
 }
