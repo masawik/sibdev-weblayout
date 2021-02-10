@@ -71,7 +71,7 @@ button {
     border-radius: 50px;
 }
 
-.menu-container {
+.menu-plate {
     background-color: var(--menuBG);
     min-width: 192px;
     z-index: 1;
@@ -130,7 +130,7 @@ button {
     top: 8px;
 }
 
-#menu-toggle:checked + .menu-container {
+#menu-toggle:checked + .menu-plate {
     left: 0;
 }
 

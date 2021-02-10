@@ -17,33 +17,45 @@
 
   <div class="search-block">
     <button class="search-block__btn btn_transparent">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z"
+              stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
     </button>
 
     <input class="search-block__input" placeholder="Какой магазин вам нужен?" type="text">
   </div>
 
-<!--  инпут отвечает за открытие меню. при checked ищет menu-container по соседним элементам, поэтому находится тут-->
+  <!--  инпут отвечает за открытие меню. при checked ищет menu-container по соседним элементам, поэтому находится тут-->
   <input id="menu-toggle" class="menu-toggle" type="checkbox">
-  <div class="menu-container">
+  <div class="menu-plate">
     <div class="menu-btn">
-      <svg class="menu-btn__background" width="48" height="106" viewBox="0 0 48 106" fill="#F3F4F9" xmlns="http://www.w3.org/2000/svg">
+      <svg class="menu-btn__background" width="48" height="106" viewBox="0 0 48 106" fill="#F3F4F9"
+           xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0C0 11.7415 9.99255 16.1938 20.8591 21.0356C33.809 26.8055 48 33.1285 48 53C48 72.8715 33.809 79.1945 20.8591 84.9644C9.99255 89.8062 0 94.2585 0 106V0Z"/>
       </svg>
 
       <label class="menu-btn__btn" for="menu-toggle">
         <span></span>
       </label>
-
     </div>
 
-    <nav>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </nav>
+    <div class="menu-container">
+      <div class="logo">
+        <img class="logo__img" src="./img/logo.png" alt="BECO logo">
+        <span class="logo__title">BECO</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 </body>
