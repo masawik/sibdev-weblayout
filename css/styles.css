@@ -119,6 +119,10 @@ a {
     bottom: 0;
 }
 
+.menu-plate_opened {
+    left: 0;
+}
+
 .menu-btn {
     position: absolute;
     right: -47px;
@@ -166,12 +170,8 @@ a {
     top: 8px;
 }
 
-#menu-toggle:checked + .menu-plate {
-    left: 0;
-}
-
 .menu-container {
-    padding: 40px 0 0 0;
+    padding-top: 40px;
     font-weight: bold;
 }
 
