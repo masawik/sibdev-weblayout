@@ -1,0 +1,137 @@
+:root {
+    --grayC4: #C4C4C4;
+    --grayE5: #E5E5E5;
+    --black26: #262626;
+
+    --menuBG: #F3F4F9;
+    --menuWidth: 198px;
+    --menuVisiblePart: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+}
+
+ul, li, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    padding: 0;
+}
+
+.btn_transparent {
+    border: none;
+    background-color: transparent;
+}
+
+.header {
+    padding: 38px 22px 26px 32px;
+    border-bottom: 1px solid var(--grayE5);
+}
+
+.header__title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.search-block {
+    position: relative;
+}
+
+.search-block__btn {
+    padding: 8px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+.search-block__input {
+    padding: 17px 21px 17px 43px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid var(--grayC4);
+    border-radius: 50px;
+}
+
+.menu-container {
+    background-color: var(--menuBG);
+    min-width: 192px;
+    z-index: 1;
+    transition-property: left, right;
+    transition-duration: .3s;
+    position: fixed;
+    left: calc((var(--menuWidth) - var(--menuVisiblePart)) * -1);
+    top: 0;
+    bottom: 0;
+}
+
+.menu-btn {
+    position: absolute;
+    right: -47px;
+}
+
+.menu-btn__background {
+    fill: var(--menuBG);
+}
+
+.menu-btn__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 6px;
+}
+
+.menu-toggle {
+    /*спрятал посильнее на всякий случай*/
+    visibility: hidden;
+    display: flex;
+    top: -10px;
+}
+
+.menu-btn__btn > span,
+.menu-btn__btn > span::after,
+.menu-btn__btn > span::before {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: var(--black26);
+    border-radius: 50px;
+    position: absolute;
+}
+.menu-btn__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu-btn__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+#menu-toggle:checked + .menu-container {
+    left: 0;
+}
+
+
