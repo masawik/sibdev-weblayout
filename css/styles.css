@@ -4,6 +4,7 @@
     --grayFA: #FAFAFA;
     --black26: #262626;
     --cyan: #34ABE0;
+    --cyanBG: rgba(52, 171, 224, 0.05);
     --white: #FFF;
     --red: #DF212D;
 
@@ -11,6 +12,7 @@
     --menuWidth: 198px;
     --menuVisiblePart: 18px;
 
+    --defaultTransitionDuration: .3s;
     --couponShadow: rgba(0, 0, 0, 0.1);
 }
 
@@ -37,6 +39,7 @@ button {
     padding: 0;
 }
 
+
 a {
     text-decoration: none;
     color: inherit;
@@ -56,7 +59,7 @@ a {
     background-color: var(--white);
     border-bottom: 1px solid var(--grayE5);
     transition-property: padding-left;
-    transition-duration: .3s;
+    transition-duration: var(--defaultTransitionDuration);
     z-index: 1;
 }
 
@@ -98,8 +101,26 @@ a {
     position: relative;
 }
 
-.search-block__btn {
+.search-btn {
+    outline: none;
     padding: 8px;
+}
+
+.search-btn__img path {
+    transition-property: stroke;
+    transition-duration: var(--defaultTransitionDuration);
+}
+
+.search-btn:hover .search-btn__img path,
+.search-btn:focus .search-btn__img path{
+    stroke: var(--cyan);
+}
+
+.search-btn:active {
+    transform: scale(0.95);
+}
+
+.search-block__btn {
     position: absolute;
     left: 8px;
     top: 8px;
@@ -111,14 +132,22 @@ a {
     font-size: 14px;
     border: 1px solid var(--grayC4);
     border-radius: 50px;
+    transition-property: background-color, border;
+    transition-duration: var(--defaultTransitionDuration);
+}
+
+.search-block__input:focus {
+    outline: none;
+    border: 1px solid var(--cyan);
+    background-color: var(--cyanBG);
 }
 
 .menu-plate {
     background-color: var(--menuBG);
-    min-width: 192px;
+    width: 192px;
     z-index: 2;
     transition-property: left, right;
-    transition-duration: .3s;
+    transition-duration: var(--defaultTransitionDuration);
     position: fixed;
     left: calc((var(--menuWidth) - var(--menuVisiblePart)) * -1);
     top: 0;
@@ -150,25 +179,39 @@ a {
     right: 6px;
 }
 
-.menu-btn__btn > span,
-.menu-btn__btn > span::after,
-.menu-btn__btn > span::before {
+.menu-btn__btn-lines,
+.menu-btn__btn-lines::after,
+.menu-btn__btn-lines::before {
     display: block;
     width: 26px;
     height: 2px;
     background-color: var(--black26);
     border-radius: 50px;
+    transition-property: opacity, transform;
+    transition-duration: var(--defaultTransitionDuration);
     position: absolute;
 }
 
-.menu-btn__btn > span::before {
+.menu-btn__btn-lines::before {
     content: '';
     top: -8px;
 }
 
-.menu-btn__btn > span::after {
+.menu-btn__btn-lines::after {
     content: '';
     top: 8px;
+}
+
+.menu-plate_opened .menu-btn__btn-lines {
+    transform: rotate(45deg);
+}
+
+.menu-plate_opened .menu-btn__btn-lines::before {
+    transform: rotate(90deg) translateX(8px);
+}
+
+.menu-plate_opened .menu-btn__btn-lines::after {
+    transform: rotate(-90deg) translateX(8px);
 }
 
 .menu-container {
@@ -210,13 +253,22 @@ a {
     display: flex;
     align-items: center;
     padding: 0 20px 0 20px;
+    transition-property: color;
+    transition-duration: var(--defaultTransitionDuration);
 }
 
-.menu__link:hover {
+.menu__link:hover,
+.menu__link:focus {
     color: var(--cyan);
 }
 
-.menu__link:hover > svg > * {
+.menu__link svg path {
+    transition-property: stroke;
+    transition-duration: var(--defaultTransitionDuration);
+}
+
+.menu__link:hover svg path,
+.menu__link:focus svg path{
     stroke: var(--cyan);
 }
 
@@ -225,7 +277,7 @@ a {
     border-left: 2px solid var(--cyan);
 }
 
-.menu__link_selected > svg > * {
+.menu__link_selected svg path {
     stroke: var(--cyan);
 }
 
@@ -239,7 +291,6 @@ a {
     flex-wrap: wrap;
 }
 
-/*todo сделать вырез и hover-эффекты на карточках*/
 .coupon {
     padding: 16px 20px;
     margin: 14px 0;
@@ -367,7 +418,7 @@ a {
     }
 
     .menu-plate {
-        min-width: 104px;
+        width: 104px;
     }
 
     .menu__link-text {
