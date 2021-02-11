@@ -10,6 +10,8 @@
     --menuBG: #F3F4F9;
     --menuWidth: 198px;
     --menuVisiblePart: 18px;
+
+    --couponShadow: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -174,7 +176,6 @@ a {
     font-weight: bold;
 }
 
-/*todo проверить шрифт*/
 .logo {
     display: flex;
     align-items: center;
@@ -188,9 +189,13 @@ a {
 
 .logo__title {
     margin-left: 5px;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     line-height: 21px;
+}
+
+.main {
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu-container__menu {
@@ -205,6 +210,14 @@ a {
     display: flex;
     align-items: center;
     padding: 0 20px 0 20px;
+}
+
+.menu__link:hover {
+    color: var(--cyan);
+}
+
+.menu__link:hover > svg > * {
+    stroke: var(--cyan);
 }
 
 .menu__link_selected {
@@ -226,7 +239,7 @@ a {
     flex-wrap: wrap;
 }
 
-/*todo подключить шрифт*/
+/*todo сделать вырез и hover-эффекты на карточках*/
 .coupon {
     padding: 16px 20px;
     margin: 14px 0;
@@ -236,12 +249,54 @@ a {
     min-height: 130px;
     background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--couponShadow);
     position: relative;
+}
+
+/*todo попробовать реализовать рубцы через svg или clip-path*/
+
+.coupon::before, .coupon::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-color: var(--grayFA);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+}
+
+.coupon::before {
+    box-shadow: inset -13px 12px 7px -15px var(--couponShadow);
+    left: -10px;
+}
+
+.coupon::after {
+    box-shadow: inset 13px -12px 7px -15px var(--couponShadow);
+    right: -10px;
 }
 
 .coupon_highlighted {
     border: 1px solid var(--red);
+}
+
+.coupon_highlighted::before,
+.coupon_highlighted::after {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--red);
+}
+
+.coupon_highlighted::before {
+    left: -7px;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.coupon_highlighted::after {
+    right: -7px;
+    border-right-color: transparent;
+    border-top-color: transparent;
 }
 
 .coupon__header {
@@ -321,6 +376,10 @@ a {
 
     .menu__link {
         padding-left: 42px;
+    }
+
+    .menu__link_selected {
+        border-left: 3px solid var(--cyan);
     }
 
     .menu-plate {
