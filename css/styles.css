@@ -292,62 +292,30 @@ a {
 }
 
 .coupon {
-    padding: 16px 20px;
     margin: 14px 0;
     width: 268px;
     font-size: 12px;
     display: block;
     min-height: 130px;
-    background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 0 10px var(--couponShadow);
+    background-image: url("../img/coupon.svg");
+    background-repeat: round;
+    filter: drop-shadow(0px 4px 3px var(--couponShadow));
     position: relative;
 }
 
-/*todo попробовать реализовать рубцы через svg или clip-path*/
-
-.coupon::before, .coupon::after {
-    content: '';
-    width: 13px;
-    height: 13px;
-    background-color: var(--grayFA);
-    border-radius: 2px;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
+.coupon-container {
+    padding: 16px 20px;
 }
 
-.coupon::before {
-    box-shadow: inset -13px 12px 7px -15px var(--couponShadow);
-    left: -10px;
-}
-
-.coupon::after {
-    box-shadow: inset 13px -12px 7px -15px var(--couponShadow);
-    right: -10px;
+.coupon__img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
 }
 
 .coupon_highlighted {
-    border: 1px solid var(--red);
-}
-
-.coupon_highlighted::before,
-.coupon_highlighted::after {
-    width: 10px;
-    height: 10px;
-    border: 1px solid var(--red);
-}
-
-.coupon_highlighted::before {
-    left: -7px;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-}
-
-.coupon_highlighted::after {
-    right: -7px;
-    border-right-color: transparent;
-    border-top-color: transparent;
+    filter: drop-shadow(0px 0px 2px var(--red));
 }
 
 .coupon__header {
@@ -370,6 +338,7 @@ a {
 }
 
 .coupon__content {
+    text-transform: uppercase;
     color: var(--red);
     font-weight: bold;
     font-size: 28px;
@@ -382,15 +351,14 @@ a {
     text-transform: uppercase;
 }
 
-.coupon_with-bg {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.cake {
-    background-image: url("../img/cake.png");
-}
+.wine {background-image: url("../img/card-images/wine.png");}
+.beer {background-image: url("../img/card-images/beer.png");}
+.cake {background-image: url("../img/card-images/cake.png");}
+.sushi {background-image: url("../img/card-images/sushi.png");}
+.fruits {background-image: url("../img/card-images/fruits.png");}
+.kebab {background-image: url("../img/card-images/kebab.png");}
+.icecream {background-image: url("../img/card-images/icecream.png");}
+.meat {background-image: url("../img/card-images/meat.png");}
 
 @media all and (max-width: 767px) {
     .menu__icon {
@@ -478,7 +446,8 @@ a {
     }
 
     .coupon__body {
-        margin-top: 10px;
+        padding-left: 5px;
+        margin-top: 32px;
     }
 
     .coupon__content {
