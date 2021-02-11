@@ -32,4 +32,11 @@ class sidebarController {
   }
 }
 
-const sideBar = new sidebarController()
+(() => {
+  const sideBar = new sidebarController()
+  const toggleBtn = document.querySelector('.sidebar-toggle-btn-js')
+
+  toggleBtn.addEventListener('click', () => {
+    sideBar.toggle()
+  })
+})()
